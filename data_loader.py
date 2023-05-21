@@ -6,6 +6,7 @@ class DataLoader:
 
     def __init__(self, image_path):
         self.image_path = image_path
+        self.load()
 
     def load(self):
         self.image = nib.load(self.image_path)
