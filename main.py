@@ -1,4 +1,5 @@
-from data_loader import DataLoader
+from data_holder import DataHolder
+from synthesis import SyntheticModel
 import sys
 import os
 
@@ -21,14 +22,13 @@ def cycleData():
 
 def main():
     inputNiftiPaths = cycleData()
-    dataLoader = DataLoader(inputNiftiPaths)
-    print(dataLoader.images[0]['ImageMatrix'])
+    synthModel = SyntheticModel('args')
+    dataHolder = DataHolder(inputNiftiPaths, synthModel)
+    dataHolder.runSynth(50)
 
 
 if __name__ == '__main__':
     main()
 
-
-# Need to have a function that loops through all data in input directory and runs through
 
 # In main class, should have a way to pass the arguments into a dictionary to pass to synthesis model
