@@ -10,7 +10,8 @@ def cycleData():
     """
     Cycles and loads all data from the base directory
     """
-    path = os.path.join(os.getcwd(), 'Data')
+    print('Reading input...')
+    path = os.path.join(os.getcwd(), 'Data', 'InputImages')
     niftiFilePaths = []
     for root, dirnames, filenames in os.walk(path):
         for filename in filenames:
@@ -24,7 +25,8 @@ def main():
     inputNiftiPaths = cycleData()
     synthModel = SyntheticModel('args')
     dataHolder = DataHolder(inputNiftiPaths, synthModel)
-    dataHolder.runSynth(50)
+    dataHolder.makeTransforms(1)
+    dataHolder.applyTransforms()
 
 
 if __name__ == '__main__':
