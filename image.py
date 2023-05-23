@@ -25,34 +25,9 @@ class Image:
         self.transformDictionary['headers'] = self.synthModel.copyHeaders(
             self.header, n_images)
 
-        # If parameter is not 0, generate affine translations
-        if self.synthModel.affine_translation_range != 0:
-            self.transformDictionary['affineTranslation'] = self.synthModel.generateAffineTranslation(
-                self.header, n_images)
-        # If it is 0, fill the translation lookup with 0
-        else:
-            self.transformDictionary['affineTranslation'] = [
-                np.zeros((3,), dtype=int) for i in range(n_images)]
-
-        # Rotation
-        if self.synthModel.affine_rotation_range != 0:
-            self.transformDictionary['affineRotation'] = self.synthModel.generateAffineRotation(
-                n_images)
-        else:
-            self.transformDictionary['affineRotation'] = [
-                [np.array[1, 0, 0], np.array[0, 1, 0], np.array[0, 0, 1]] for i in range(n_images)]
-
-        # Scaling
-        if self.synthModel.affine_scaling_range != 0:
-            self.transformDictionary['affineScaling'] = self.synthModel.generateAffineScaling(
-                n_images)
-        else:
-            self.transformDictionary['affineScaling'] = [
-                np.diag(np.array[1, 1, 1]) for i in range(n_images)]
-
-        # Now combine the affines
-        self.transformDictionary['affineTransform'] = self.synthModel.combineAffines(
-            self.transformDictionary['affineTranslation'], self.transformDictionary['affineRotation'], self.transformDictionary['affineScaling'])
+        # create the affines
+        self.transformDictionary['affineTransform'] = self.synthModel.generateAffines(
+            self.header, n_images)
 
         # If parameter is not zero, generate downsampling factor
         if self.synthModel.downsample_factor != 0:

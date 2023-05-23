@@ -2,6 +2,7 @@ import numpy as np
 from scipy.spatial.transform import Rotation
 from scipy.ndimage import affine_transform
 from scipy.ndimage import zoom
+from affine import AffineGenerator
 
 
 class SyntheticModel():
@@ -37,69 +38,10 @@ class SyntheticModel():
         new_headers = [header.copy() for _ in range(n_images)]
         return new_headers
 
-    def generateAffineTranslation(self, header, n_images):
-        """
-        Generate the affine translation portion
-        """
-        translations = []
-        affine_translation_scaling = 1 / header['pixdim'][1]
-        for i in range(n_images):
-            translation = np.random.uniform(
-                low=0, high=self.affine_translation_range, size=3)
-            scaled_translation = np.multiply(
-                translation, affine_translation_scaling)
-            translations.append(scaled_translation)
-
-        return translations
-
-    def generateAffineRotation(self, n_images):
-        """
-        Generate the affine rotation portion
-        """
-        rotations = []
-        for i in range(n_images):
-            rotation_degrees = np.random.uniform(
-                low=0, high=self.rotation_range, size=3)
-            rotation_radians = np.radians(rotation_degrees)
-            rotation_x = Rotation.from_rotvec(
-                rotation_radians[0] * np.array([1, 0, 0]))
-            rotation_x_matrix = rotation_x.as_matrix()
-            rotation_y = Rotation.from_rotvec(
-                rotation_radians[1] * np.array([0, 1, 0]))
-            rotation_y_matrix = rotation_y.as_matrix()
-            rotation_z = Rotation.from_rotvec(
-                rotation_radians[2] * np.array([0, 0, 1]))
-            rotation_z_matrix = rotation_z.as_matrix()
-            rotation = [rotation_x_matrix,
-                        rotation_y_matrix, rotation_z_matrix]
-            rotations.append(rotation)
-
-        return rotations
-
-    def generateAffineScaling(self, n_images):
-        """
-        Generate the affine scaling portion
-        """
-        scalings = []
-        for i in range(n_images):
-            scaling = np.random.uniform(
-                low=self.affine_scaling_range[0], high=self.affine_scaling_range[1], size=3)
-            scaling_matrix = np.diag(scaling)
-            scalings.append(scaling_matrix)
-
-        return scalings
-
-    def combineAffines(self, translations, rotations, scalings):
-        affines = []
-        for index, translation in enumerate(translations):
-            init = rotations[index][0] @ rotations[index][1] @ rotations[index][2] @ scalings[index]
-            affine = np.zeros((4, 4))
-            affine[:3, :3] = init
-            affine[:3, 3] = translations[index].ravel()
-            affine[3, :] = [0, 0, 0, 1]
-            affines.append(affine)
-
-        return affines
+    def generateAffines(self, header, n_images):
+        affineGenerator = AffineGenerator(
+            header, self.affine_translation_range, self.affine_rotation_range, self.affine_scaling_range, n_images)
+        return affineGenerator.affines
 
     # THIS CAN BE DELETED
     def generateAffineTransform(self, original_affine, header, n_images):
@@ -164,7 +106,8 @@ class SyntheticModel():
         This function generates a list of 'new' label intensity means for each n_images
         """
         print('Generating label intensities...')
-        label_intensities = np.random.uniform(low=0.0, high=1.0, size=n_images)
+        label_intensities = np.random.uniform(
+            low=0.0, high=1.0, size=n_images)
         return label_intensities
 
     def applyAffineTransform(self, matrices, affines, headers):
