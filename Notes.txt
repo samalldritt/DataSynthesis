@@ -1,1 +1,7 @@
 Should make images for each step of the pipeline
+
+The affine transform is sort of weird and still cuts off the image
+
+It would be cool to be able to set all the parameters without sampling them
+
+Need to break up the affine translation

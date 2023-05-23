@@ -38,7 +38,11 @@ class DataHolder:
         Output: dict
         """
         transforms = {
+            'matrices': [],
             'headers': [],
+            'affineTranslation': [],
+            'affineRotation': [],
+            'affineScaling': [],
             'affineTransform': [],
             'downsampleFactor': [],
             'labelIntensityMean': []
