@@ -3,6 +3,8 @@ from scipy.spatial.transform import Rotation
 from scipy.ndimage import affine_transform
 from scipy.ndimage import zoom
 from affine import AffineGenerator
+from deformation import DeformationGenerator
+import utils
 
 
 class SyntheticModel():
@@ -18,97 +20,60 @@ class SyntheticModel():
         self.affine_rotation_range = args['affine_rotation']
         self.affine_scaling_range = [
             (100 - args['affine_scaling']) / 100, (100 + args['affine_scaling']) / 100]
-        self.downsample_factor = args['dowsample_factor']
+        self.downsample_factor = args['downsample_factor']
         self.label_mean = args['mean_label_intensity']
+        self.deformation_resolution = args['deformation_resolution']
+        self.deformation_sd = args['deformation_sd']
+        self.n_images = args['n_images']
 
-    def copyMatrices(self, matrix, n_images):
+    def copyMatrices(self, matrix):
         """
         Copies the matrices and adds it to the transform dictionary
         """
         matrices = []
-        for i in range(n_images):
+        for i in range(self.n_images):
             matrices.append(matrix)
 
         return matrices
 
-    def copyHeaders(self, header, n_images):
+    def copyHeaders(self, header):
         """
         This function just makes a new header for every image, we change them later when performing actual operations
         """
-        new_headers = [header.copy() for _ in range(n_images)]
+        new_headers = [header.copy() for _ in range(self.n_images)]
         return new_headers
 
-    def generateAffines(self, header, n_images):
+    def generateAffines(self, header):
         affineGenerator = AffineGenerator(
-            header, self.affine_translation_range, self.affine_rotation_range, self.affine_scaling_range, n_images)
+            header, self.affine_translation_range, self.affine_rotation_range, self.affine_scaling_range, self.n_images)
         return affineGenerator.affines
 
-    # THIS CAN BE DELETED
-    def generateAffineTransform(self, original_affine, header, n_images):
-        """
-        For all NIFTI data, create new attribute with dictionary with uniformly sampled distributions of each of the affine parameters
-        """
-        affines = []
-        affine_translation_scaling = 1 / header['pixdim'][1]
-        for i in range(n_images):
-            # Sampling random values for translation, rotation, and scaling
-            translation = np.random.uniform(
-                low=0, high=self.affine_translation_range, size=3)
-            scaled_translation = np.multiply(
-                translation, affine_translation_scaling)
-            rotation_degrees = np.random.uniform(
-                low=0, high=self.rotation_range, size=3)
-            rotation_radians = np.radians(rotation_degrees)
-            scaling = np.random.uniform(
-                low=self.affine_scaling_range[0], high=self.affine_scaling_range[1], size=3)
-
-            # Create rotation matrices for each axis
-            rotation_x = Rotation.from_rotvec(
-                rotation_radians[0] * np.array([1, 0, 0]))
-            rotation_x_matrix = rotation_x.as_matrix()
-            rotation_y = Rotation.from_rotvec(
-                rotation_radians[1] * np.array([0, 1, 0]))
-            rotation_y_matrix = rotation_y.as_matrix()
-            rotation_z = Rotation.from_rotvec(
-                rotation_radians[2] * np.array([0, 0, 1]))
-            rotation_z_matrix = rotation_z.as_matrix()
-
-            # Create a scaling matrix
-            scaling_matrix = np.diag(scaling)
-
-            # Combine the matrices
-            init_affine = rotation_x_matrix @ rotation_y_matrix @ rotation_z_matrix @ scaling_matrix
-            affine = np.zeros((4, 4))
-            affine[:3, :3] = init_affine
-            affine[:3, 3] = scaled_translation.ravel()
-            affine[3, :] = [0, 0, 0, 1]
-
-            # Add affine to affine list
-            affines.append(affine)
-
-        return affines
-
-    def generateDownsampleFactor(self, n_images):
+    def generateDownsampleFactor(self):
         """
         Uniformly samples downsampling factor from a range and adds to the dictionary of transforms
         """
         print('Generating downsampling factors...')
         downsample_list = []
-        for i in range(n_images):
+        for i in range(self.n_images):
             downsample_factor = np.random.uniform(
                 low=1, high=self.downsample_factor)
             downsample_list.append(downsample_factor)
 
         return downsample_list
 
-    def generateLabelIntensityMean(self, n_images):
+    def generateLabelIntensityMean(self):
         """
         This function generates a list of 'new' label intensity means for each n_images
         """
         print('Generating label intensities...')
         label_intensities = np.random.uniform(
-            low=0.0, high=1.0, size=n_images)
+            low=0.0, high=1.0, size=self.n_images)
         return label_intensities
+
+    def generateDeformationFields(self, header):
+        deformer = DeformationGenerator(
+            self.deformation_resolution, self.deformation_sd, self.n_images, header)
+        return deformer.deformation_fields
 
     def applyAffineTransform(self, matrices, affines, headers):
         """
@@ -139,6 +104,7 @@ class SyntheticModel():
         new_matrices = []
         new_headers = []
         for index, matrix in enumerate(matrices):
+
             # Adjusting the nifti image first
             downsampled_data = zoom(
                 matrix, 1/downsampling[index], order=0)

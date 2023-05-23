@@ -40,6 +40,7 @@ class DataHolder:
         transforms = {
             'matrices': [],
             'headers': [],
+            'deformationFields': [],
             'affineTranslation': [],
             'affineRotation': [],
             'affineScaling': [],
@@ -74,7 +75,6 @@ class DataHolder:
 
         Output: output nifti files in Data/OutputImages
         """
-        print('Writing to output...')
         # Create a new NiftiImage
         image = nib.Nifti1Image(new_matrix, affine, header)
 
@@ -89,6 +89,7 @@ class DataHolder:
 
         output_path = os.path.join(
             output_folder, subject_name + '_' + str(count) + '_Synth_T1w.nii.gz')
+        print('Writing output: ' + output_path)
         nib.save(image, output_path)
         self.vcheck(output_path, count)
 

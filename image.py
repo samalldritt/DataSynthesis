@@ -8,7 +8,7 @@ import numpy as np
 class Image:
 
     def __init__(self, imageMatrix, imageHeader, affine, transformDictionary, synthModel):
-        self.matrix = [imageMatrix]
+        self.matrix = imageMatrix
         self.header = imageHeader
         self.affine = affine
         self.transformDictionary = transformDictionary
@@ -19,25 +19,28 @@ class Image:
 
         # Make copies of matrix
         self.transformDictionary['matrices'] = self.synthModel.copyMatrices(
-            self.matrix, n_images)
+            self.matrix)
 
         # Make copies of headers
         self.transformDictionary['headers'] = self.synthModel.copyHeaders(
-            self.header, n_images)
+            self.header)
+
+        self.transformDictionary['deformationFields'] = self.synthModel.generateDeformationFields(
+            self.header)
 
         # create the affines
         self.transformDictionary['affineTransform'] = self.synthModel.generateAffines(
-            self.header, n_images)
+            self.header)
 
         # If parameter is not zero, generate downsampling factor
         if self.synthModel.downsample_factor != 0:
             self.transformDictionary['downsampleFactor'] = self.synthModel.generateDownsampleFactor(
-                n_images)
+            )
 
         # If parameter is not 0, generate new label intensity mean
         if self.synthModel.label_mean != 0:
             self.transformDictionary['labelIntensityMean'] = self.synthModel.generateLabelIntensityMean(
-                n_images)
+            )
 
     def synthImages(self):
         print('Applying affine transforms...' + '\n')
@@ -45,7 +48,7 @@ class Image:
         # If we have label intensity means, we run them through the model
         if len(self.transformDictionary['labelIntensityMean']) != 0:
             self.transformDictionary['matrices'], self.transformDictionary['headers'] = self.synthModel.applyLabelIntensityMean(
-                self.matrix, self.transformDictionary['labelIntensityMean'], self.transformDictionary['headers'])
+                self.transformDictionary['matrices'], self.transformDictionary['labelIntensityMean'], self.transformDictionary['headers'])
 
         # Have to run the affine transforms no matter what, already set default affines for non-existent parameters
         self.transformDictionary['matrices'], self.transformDictionary['headers'] = self.synthModel.applyAffineTransform(
@@ -55,4 +58,5 @@ class Image:
         if len(self.transformDictionary['downsampleFactor']) != 0:
             self.transformDictionary['matrices'], self.transformDictionary['headers'] = self.synthModel.applyDownsampling(
                 self.transformDictionary['matrices'], self.transformDictionary['downsampleFactor'], self.transformDictionary['headers'])
+
         return self.transformDictionary['matrices'], self.transformDictionary['headers']

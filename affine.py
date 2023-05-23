@@ -43,26 +43,33 @@ class AffineGenerator:
         Generate the affine rotation portion
         """
         if self.rotation_range == 0:
-            rotations = [[np.array[1, 0, 0], np.array[0, 1, 0],
-                          np.array[0, 0, 1]] for i in range(self.n_images)]
+            print('Rotations turned off')
+            # rotations = [[Rotation.from_rotvec(np.array([1, 0, 0])).as_matrix(), Rotation.from_rotvec(np.array([0, 1, 0])).as_matrix(),
+            #              Rotation.from_rotvec(np.array([0, 0, 1])).as_matrix()] for i in range(self.n_images)]
+            rotations = [np.identity(3) for i in range(self.n_images)]
         else:
             rotations = []
             for i in range(self.n_images):
                 rotation_degrees = np.random.uniform(
                     low=0, high=self.rotation_range, size=3)
                 rotation_radians = np.radians(rotation_degrees)
-                rotation_x = Rotation.from_rotvec(
-                    rotation_radians[0] * np.array([1, 0, 0]))
-                rotation_x_matrix = rotation_x.as_matrix()
-                rotation_y = Rotation.from_rotvec(
-                    rotation_radians[1] * np.array([0, 1, 0]))
-                rotation_y_matrix = rotation_y.as_matrix()
-                rotation_z = Rotation.from_rotvec(
-                    rotation_radians[2] * np.array([0, 0, 1]))
-                rotation_z_matrix = rotation_z.as_matrix()
-                rotation = [rotation_x_matrix,
-                            rotation_y_matrix, rotation_z_matrix]
-                rotations.append(rotation)
+                rotation_x = np.array([[1, 0, 0],
+                                       [0, np.cos(rotation_radians[0]), -
+                                        np.sin(rotation_radians[0])],
+                                       [0, np.sin(rotation_radians[0]), np.cos(rotation_radians[0])]])
+
+                rotation_y = np.array([[np.cos(rotation_radians[1]), 0, np.sin(rotation_radians[1])],
+                                       [0, 1, 0],
+                                       [-np.sin(rotation_radians[1]), 0, np.cos(rotation_radians[1])]])
+
+                rotation_z = np.array([[np.cos(rotation_radians[2]), -np.sin(rotation_radians[2]), 0],
+                                       [np.sin(rotation_radians[2]), np.cos(
+                                           rotation_radians[2]), 0],
+                                       [0, 0, 1]])
+
+                rotation_matrix = np.dot(
+                    np.dot(rotation_x, rotation_y), rotation_z)
+                rotations.append(rotation_matrix)
 
         return rotations
 
@@ -86,9 +93,11 @@ class AffineGenerator:
     def combineAffines(self, translations, rotations, scalings):
         self.affines = []
         for index, translation in enumerate(translations):
-            init = rotations[index][0] @ rotations[index][1] @ rotations[index][2] @ scalings[index]
+            init = rotations[index] @ scalings[index]
             affine = np.zeros((4, 4))
-            affine[:3, :3] = init
-            affine[:3, 3] = translations[index].ravel()
+            affine[: 3, : 3] = init
+            affine[: 3, 3] = translations[index].ravel()
             affine[3, :] = [0, 0, 0, 1]
             self.affines.append(affine)
+
+        return self.affines
