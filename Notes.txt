@@ -5,3 +5,5 @@ The affine transform is sort of weird and still cuts off the image
 It would be cool to be able to set all the parameters without sampling them
 
 you gotta comment this shit tomorrow
+
+deformation fields returning 0??? size matrices

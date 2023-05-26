@@ -44,8 +44,6 @@ class AffineGenerator:
         """
         if self.rotation_range == 0:
             print('Rotations turned off')
-            # rotations = [[Rotation.from_rotvec(np.array([1, 0, 0])).as_matrix(), Rotation.from_rotvec(np.array([0, 1, 0])).as_matrix(),
-            #              Rotation.from_rotvec(np.array([0, 0, 1])).as_matrix()] for i in range(self.n_images)]
             rotations = [np.identity(3) for i in range(self.n_images)]
         else:
             rotations = []

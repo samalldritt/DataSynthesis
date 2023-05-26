@@ -9,7 +9,6 @@ class DeformationGenerator:
         self.sd = sd
         self.image_resolution = header['pixdim'][1]
         self.image_shape = header['dim'][1:4]
-        print(self.image_shape)
         self.displacement_resolution = utils.scale_mm(
             displacement_resolution, self.image_resolution)
         self.n_images = n_images
@@ -21,10 +20,11 @@ class DeformationGenerator:
 
     def generateDisplacementVectors(self):
         displacement_vectors = []
+        num_components = len(self.image_shape)
         for i in range(self.n_images):
             displacement_sd = self.displacement_resolution / np.sqrt(self.sd)
             displacement_vector = np.random.normal(
-                scale=displacement_sd, size=(3, *self.image_shape))
+                scale=displacement_sd, size=(num_components, *self.image_shape))
             displacement_vectors.append(displacement_vector)
 
         return displacement_vectors
@@ -33,7 +33,8 @@ class DeformationGenerator:
         deformation_fields = []
         for i in range(len(displacement_vectors)):
             displacement_field = sitk.GetImageFromArray(
-                displacement_vectors[i])
+                np.transpose(displacement_vectors[i], axes=(3, 2, 1, 0)))
+            size = displacement_field.GetSize()
             deformation_transform = sitk.DisplacementFieldTransform(
                 displacement_field)
             for i in range(5):
@@ -42,7 +43,7 @@ class DeformationGenerator:
             deformation_field = sitk.TransformToDisplacementField(
                 deformation_transform)
             deformation_field = sitk.Resample(
-                deformation_field, self.image_shape, sitk.Transform(), sitk.sitkBSpline)
+                deformation_field, size, sitk.Transform(), sitk.sitkBSpline)
             deformation_array = sitk.GetArrayFromImage(deformation_field)
             deformation_fields.append(deformation_array)
 

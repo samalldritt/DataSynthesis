@@ -107,5 +107,6 @@ class DataHolder:
         for base_index, image in enumerate(self.images):
             new_image_matrices, new_image_headers = image.synthImages()
             for new_image_index, new_image in enumerate(new_image_matrices):
+                print(new_image_index)
                 self.write(new_image, new_image_headers[new_image_index],
                            self.image_paths[base_index], new_image_index, image.affine)

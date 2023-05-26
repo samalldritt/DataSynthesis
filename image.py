@@ -45,6 +45,12 @@ class Image:
     def synthImages(self):
         print('Applying affine transforms...' + '\n')
 
+        # Run the deformation
+        if len(self.transformDictionary['deformationFields']) != 0:
+            # Might need to change header later
+            self.transformDictionary['matrices'] = self.synthModel.applyDeformationFields(
+                self.transformDictionary['matrices'], self.transformDictionary['deformationFields'])
+
         # If we have label intensity means, we run them through the model
         if len(self.transformDictionary['labelIntensityMean']) != 0:
             self.transformDictionary['matrices'], self.transformDictionary['headers'] = self.synthModel.applyLabelIntensityMean(
