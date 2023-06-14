@@ -1,0 +1,620 @@
+2023-06-04 23:52:24,363 [INFO] Starting synthetic data generation...
+2023-06-04 23:52:24,363 [INFO] Received the following parameters:
+2023-06-04 23:52:24,364 [INFO] 
+I                      : Data/InputImages
+O                      : Data/Output
+AFFINE_TRANSLATION     : 10
+AFFINE_ROTATION        : 45
+AFFINE_SCALING         : 20
+DOWNSAMPLE_FACTOR      : 5
+MEAN_LABEL_INTENSITY   : None
+N_IMAGES               : 10
+DEFORMATION_RESOLUTION : 10
+DEFORMATION_SD         : 3
+2023-06-04 23:52:24,364 [INFO] Reading input from /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/InputImages
+2023-06-04 23:52:24,364 [INFO] Loading data from Data/InputImages/sub-032125_ses-001_run-1_T1w.nii.gz
+2023-06-04 23:52:25,122 [INFO] Generating label intensity means...
+2023-06-04 23:52:25,122 [INFO] Applying label intensity means for image 1
+2023-06-04 23:52:35,908 [INFO] Generating affine translation for image 1
+2023-06-04 23:52:35,908 [INFO] Generating affine rotation for synth image 1 for image 1
+2023-06-04 23:52:35,909 [INFO] Generating affine rotation for synth image 2 for image 1
+2023-06-04 23:52:35,909 [INFO] Generating affine rotation for synth image 3 for image 1
+2023-06-04 23:52:35,909 [INFO] Generating affine rotation for synth image 4 for image 1
+2023-06-04 23:52:35,909 [INFO] Generating affine rotation for synth image 5 for image 1
+2023-06-04 23:52:35,909 [INFO] Generating affine rotation for synth image 6 for image 1
+2023-06-04 23:52:35,909 [INFO] Generating affine rotation for synth image 7 for image 1
+2023-06-04 23:52:35,909 [INFO] Generating affine rotation for synth image 8 for image 1
+2023-06-04 23:52:35,909 [INFO] Generating affine rotation for synth image 9 for image 1
+2023-06-04 23:52:35,909 [INFO] Generating affine rotation for synth image 10 for image 1
+2023-06-04 23:52:35,909 [INFO] Generating affine scaling for synth image 1 for image 1
+2023-06-04 23:52:35,909 [INFO] Generating affine scaling for synth image 2 for image 1
+2023-06-04 23:52:35,909 [INFO] Generating affine scaling for synth image 3 for image 1
+2023-06-04 23:52:35,909 [INFO] Generating affine scaling for synth image 4 for image 1
+2023-06-04 23:52:35,909 [INFO] Generating affine scaling for synth image 5 for image 1
+2023-06-04 23:52:35,909 [INFO] Generating affine scaling for synth image 6 for image 1
+2023-06-04 23:52:35,909 [INFO] Generating affine scaling for synth image 7 for image 1
+2023-06-04 23:52:35,909 [INFO] Generating affine scaling for synth image 8 for image 1
+2023-06-04 23:52:35,909 [INFO] Generating affine scaling for synth image 9 for image 1
+2023-06-04 23:52:35,909 [INFO] Generating affine scaling for synth image 10 for image 1
+2023-06-04 23:52:35,909 [INFO] Combining affines for synth image 1 for image 1
+2023-06-04 23:52:35,909 [INFO] Combining affines for synth image 2 for image 1
+2023-06-04 23:52:35,909 [INFO] Combining affines for synth image 3 for image 1
+2023-06-04 23:52:35,910 [INFO] Combining affines for synth image 4 for image 1
+2023-06-04 23:52:35,910 [INFO] Combining affines for synth image 5 for image 1
+2023-06-04 23:52:35,910 [INFO] Combining affines for synth image 6 for image 1
+2023-06-04 23:52:35,910 [INFO] Combining affines for synth image 7 for image 1
+2023-06-04 23:52:35,910 [INFO] Combining affines for synth image 8 for image 1
+2023-06-04 23:52:35,910 [INFO] Combining affines for synth image 9 for image 1
+2023-06-04 23:52:35,910 [INFO] Combining affines for synth image 10 for image 1
+2023-06-04 23:52:35,910 [INFO] Applying affines for image 1
+2023-06-04 23:57:18,927 [INFO] Saving images to Data/Output
+2023-06-04 23:57:18,932 [INFO] Saving synth image 1 for image 1
+2023-06-04 23:57:25,081 [INFO] Saving synth image 2 for image 1
+2023-06-04 23:57:30,254 [INFO] Saving synth image 3 for image 1
+2023-06-04 23:57:35,843 [INFO] Saving synth image 4 for image 1
+2023-06-04 23:57:41,192 [INFO] Saving synth image 5 for image 1
+2023-06-04 23:57:45,092 [INFO] Saving synth image 6 for image 1
+2023-06-04 23:57:50,162 [INFO] Saving synth image 7 for image 1
+2023-06-04 23:57:54,467 [INFO] Saving synth image 8 for image 1
+2023-06-04 23:57:58,876 [INFO] Saving synth image 9 for image 1
+2023-06-04 23:58:03,823 [INFO] Saving synth image 10 for image 1
+2023-06-05 00:10:01,761 [INFO] Starting synthetic data generation...
+2023-06-05 00:10:01,761 [INFO] Received the following parameters:
+2023-06-05 00:10:01,761 [INFO] 
+I                      : Data/InputImages
+O                      : Data/Output
+AFFINE_TRANSLATION     : 10
+AFFINE_ROTATION        : 45
+AFFINE_SCALING         : 20
+DOWNSAMPLE_FACTOR      : 5
+MEAN_LABEL_INTENSITY   : None
+N_IMAGES               : 10
+DEFORMATION_RESOLUTION : 10
+DEFORMATION_SD         : 3
+2023-06-05 00:10:01,761 [INFO] Reading input from /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/InputImages
+2023-06-05 00:10:01,762 [INFO] Loading data from /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/InputImages/sub-032125_ses-001_run-1_T1w.nii.gz
+2023-06-05 00:10:02,524 [INFO] Generating label intensity means...
+2023-06-05 00:10:02,524 [INFO] Applying label intensity means for image 1
+2023-06-05 00:10:18,817 [INFO] Generating affine translation for image 1
+2023-06-05 00:10:18,818 [INFO] Generating affine rotation for synth image 1 for image 1
+2023-06-05 00:10:18,819 [INFO] Generating affine rotation for synth image 2 for image 1
+2023-06-05 00:10:18,819 [INFO] Generating affine rotation for synth image 3 for image 1
+2023-06-05 00:10:18,819 [INFO] Generating affine rotation for synth image 4 for image 1
+2023-06-05 00:10:18,819 [INFO] Generating affine rotation for synth image 5 for image 1
+2023-06-05 00:10:18,819 [INFO] Generating affine rotation for synth image 6 for image 1
+2023-06-05 00:10:18,819 [INFO] Generating affine rotation for synth image 7 for image 1
+2023-06-05 00:10:18,819 [INFO] Generating affine rotation for synth image 8 for image 1
+2023-06-05 00:10:18,819 [INFO] Generating affine rotation for synth image 9 for image 1
+2023-06-05 00:10:18,819 [INFO] Generating affine rotation for synth image 10 for image 1
+2023-06-05 00:10:18,819 [INFO] Generating affine scaling for synth image 1 for image 1
+2023-06-05 00:10:18,819 [INFO] Generating affine scaling for synth image 2 for image 1
+2023-06-05 00:10:18,819 [INFO] Generating affine scaling for synth image 3 for image 1
+2023-06-05 00:10:18,819 [INFO] Generating affine scaling for synth image 4 for image 1
+2023-06-05 00:10:18,819 [INFO] Generating affine scaling for synth image 5 for image 1
+2023-06-05 00:10:18,819 [INFO] Generating affine scaling for synth image 6 for image 1
+2023-06-05 00:10:18,819 [INFO] Generating affine scaling for synth image 7 for image 1
+2023-06-05 00:10:18,819 [INFO] Generating affine scaling for synth image 8 for image 1
+2023-06-05 00:10:18,819 [INFO] Generating affine scaling for synth image 9 for image 1
+2023-06-05 00:10:18,819 [INFO] Generating affine scaling for synth image 10 for image 1
+2023-06-05 00:10:18,819 [INFO] Combining affines for synth image 1 for image 1
+2023-06-05 00:10:18,819 [INFO] Combining affines for synth image 2 for image 1
+2023-06-05 00:10:18,819 [INFO] Combining affines for synth image 3 for image 1
+2023-06-05 00:10:18,820 [INFO] Combining affines for synth image 4 for image 1
+2023-06-05 00:10:18,820 [INFO] Combining affines for synth image 5 for image 1
+2023-06-05 00:10:18,820 [INFO] Combining affines for synth image 6 for image 1
+2023-06-05 00:10:18,820 [INFO] Combining affines for synth image 7 for image 1
+2023-06-05 00:10:18,820 [INFO] Combining affines for synth image 8 for image 1
+2023-06-05 00:10:18,820 [INFO] Combining affines for synth image 9 for image 1
+2023-06-05 00:10:18,820 [INFO] Combining affines for synth image 10 for image 1
+2023-06-05 00:10:18,820 [INFO] Applying affines for image 1
+2023-06-05 00:13:01,333 [INFO] Starting synthetic data generation...
+2023-06-05 00:13:01,334 [INFO] Received the following parameters:
+2023-06-05 00:13:01,334 [INFO] 
+I                      : Data/InputImages
+O                      : Data/Output
+AFFINE_TRANSLATION     : 10
+AFFINE_ROTATION        : 45
+AFFINE_SCALING         : 20
+DOWNSAMPLE_FACTOR      : 5
+MEAN_LABEL_INTENSITY   : None
+N_IMAGES               : 10
+DEFORMATION_RESOLUTION : 10
+DEFORMATION_SD         : 3
+2023-06-05 00:13:01,334 [INFO] Reading input from /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/InputImages
+2023-06-05 00:13:01,334 [INFO] Loading data from /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/InputImages/sub-032125_ses-001_run-1_T1w.nii.gz
+2023-06-05 00:13:02,114 [INFO] Generating affine translation for image 1
+2023-06-05 00:13:02,114 [INFO] Generating affine rotation for synth image 1 for image 1
+2023-06-05 00:13:02,114 [INFO] Generating affine rotation for synth image 2 for image 1
+2023-06-05 00:13:02,114 [INFO] Generating affine rotation for synth image 3 for image 1
+2023-06-05 00:13:02,114 [INFO] Generating affine rotation for synth image 4 for image 1
+2023-06-05 00:13:02,114 [INFO] Generating affine rotation for synth image 5 for image 1
+2023-06-05 00:13:02,114 [INFO] Generating affine rotation for synth image 6 for image 1
+2023-06-05 00:13:02,114 [INFO] Generating affine rotation for synth image 7 for image 1
+2023-06-05 00:13:02,114 [INFO] Generating affine rotation for synth image 8 for image 1
+2023-06-05 00:13:02,114 [INFO] Generating affine rotation for synth image 9 for image 1
+2023-06-05 00:13:02,114 [INFO] Generating affine rotation for synth image 10 for image 1
+2023-06-05 00:13:02,114 [INFO] Generating affine scaling for synth image 1 for image 1
+2023-06-05 00:13:02,114 [INFO] Generating affine scaling for synth image 2 for image 1
+2023-06-05 00:13:02,114 [INFO] Generating affine scaling for synth image 3 for image 1
+2023-06-05 00:13:02,114 [INFO] Generating affine scaling for synth image 4 for image 1
+2023-06-05 00:13:02,114 [INFO] Generating affine scaling for synth image 5 for image 1
+2023-06-05 00:13:02,114 [INFO] Generating affine scaling for synth image 6 for image 1
+2023-06-05 00:13:02,114 [INFO] Generating affine scaling for synth image 7 for image 1
+2023-06-05 00:13:02,114 [INFO] Generating affine scaling for synth image 8 for image 1
+2023-06-05 00:13:02,114 [INFO] Generating affine scaling for synth image 9 for image 1
+2023-06-05 00:13:02,114 [INFO] Generating affine scaling for synth image 10 for image 1
+2023-06-05 00:13:02,114 [INFO] Combining affines for synth image 1 for image 1
+2023-06-05 00:13:02,114 [INFO] Combining affines for synth image 2 for image 1
+2023-06-05 00:13:02,114 [INFO] Combining affines for synth image 3 for image 1
+2023-06-05 00:13:02,114 [INFO] Combining affines for synth image 4 for image 1
+2023-06-05 00:13:02,114 [INFO] Combining affines for synth image 5 for image 1
+2023-06-05 00:13:02,114 [INFO] Combining affines for synth image 6 for image 1
+2023-06-05 00:13:02,114 [INFO] Combining affines for synth image 7 for image 1
+2023-06-05 00:13:02,115 [INFO] Combining affines for synth image 8 for image 1
+2023-06-05 00:13:02,115 [INFO] Combining affines for synth image 9 for image 1
+2023-06-05 00:13:02,115 [INFO] Combining affines for synth image 10 for image 1
+2023-06-05 00:13:02,115 [INFO] Applying affines for image 1
+2023-06-05 00:16:40,167 [INFO] Generating label intensity means...
+2023-06-05 00:16:40,172 [INFO] Applying label intensity means for image 1
+2023-06-05 00:17:02,354 [INFO] Saving images to /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/Output
+2023-06-05 00:17:02,355 [INFO] Saving synth image 1 for image 1
+2023-06-05 00:17:06,094 [INFO] Saving synth image 2 for image 1
+2023-06-05 00:17:09,828 [INFO] Saving synth image 3 for image 1
+2023-06-05 00:17:14,013 [INFO] Saving synth image 4 for image 1
+2023-06-05 00:17:18,451 [INFO] Saving synth image 5 for image 1
+2023-06-05 00:17:22,320 [INFO] Saving synth image 6 for image 1
+2023-06-05 00:17:25,747 [INFO] Saving synth image 7 for image 1
+2023-06-05 00:17:30,278 [INFO] Saving synth image 8 for image 1
+2023-06-05 00:17:33,425 [INFO] Saving synth image 9 for image 1
+2023-06-05 00:17:36,694 [INFO] Saving synth image 10 for image 1
+2023-06-13 19:54:10,536 [INFO] Starting synthetic data generation...
+2023-06-13 19:54:10,536 [INFO] Received the following parameters:
+2023-06-13 19:54:10,536 [INFO] 
+I                      : /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/InputImages
+O                      : /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/Output
+AFFINE_TRANSLATION     : 10
+AFFINE_ROTATION        : 45
+AFFINE_SCALING         : 20
+DOWNSAMPLE_FACTOR      : 5
+MEAN_LABEL_INTENSITY   : None
+N_IMAGES               : 10
+DEFORMATION_RESOLUTION : 10
+DEFORMATION_SD         : 3
+2023-06-13 19:54:10,537 [INFO] Reading input from /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/InputImages
+2023-06-13 19:54:10,537 [INFO] Loading data from /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/InputImages/sub-032125_ses-001_run-1_T1w.nii.gz
+2023-06-13 19:54:11,659 [INFO] Generating affine translation for image 1
+2023-06-13 19:54:11,660 [INFO] Generating affine rotation for synth image 1 for image 1
+2023-06-13 19:54:11,660 [INFO] Generating affine rotation for synth image 2 for image 1
+2023-06-13 19:54:11,660 [INFO] Generating affine rotation for synth image 3 for image 1
+2023-06-13 19:54:11,660 [INFO] Generating affine rotation for synth image 4 for image 1
+2023-06-13 19:54:11,660 [INFO] Generating affine rotation for synth image 5 for image 1
+2023-06-13 19:54:11,660 [INFO] Generating affine rotation for synth image 6 for image 1
+2023-06-13 19:54:11,660 [INFO] Generating affine rotation for synth image 7 for image 1
+2023-06-13 19:54:11,660 [INFO] Generating affine rotation for synth image 8 for image 1
+2023-06-13 19:54:11,660 [INFO] Generating affine rotation for synth image 9 for image 1
+2023-06-13 19:54:11,660 [INFO] Generating affine rotation for synth image 10 for image 1
+2023-06-13 19:54:11,660 [INFO] Generating affine scaling for synth image 1 for image 1
+2023-06-13 19:54:11,660 [INFO] Generating affine scaling for synth image 2 for image 1
+2023-06-13 19:54:11,660 [INFO] Generating affine scaling for synth image 3 for image 1
+2023-06-13 19:54:11,660 [INFO] Generating affine scaling for synth image 4 for image 1
+2023-06-13 19:54:11,660 [INFO] Generating affine scaling for synth image 5 for image 1
+2023-06-13 19:54:11,660 [INFO] Generating affine scaling for synth image 6 for image 1
+2023-06-13 19:54:11,660 [INFO] Generating affine scaling for synth image 7 for image 1
+2023-06-13 19:54:11,660 [INFO] Generating affine scaling for synth image 8 for image 1
+2023-06-13 19:54:11,660 [INFO] Generating affine scaling for synth image 9 for image 1
+2023-06-13 19:54:11,660 [INFO] Generating affine scaling for synth image 10 for image 1
+2023-06-13 19:54:11,660 [INFO] Combining affines for synth image 1 for image 1
+2023-06-13 19:54:11,660 [INFO] Combining affines for synth image 2 for image 1
+2023-06-13 19:54:11,660 [INFO] Combining affines for synth image 3 for image 1
+2023-06-13 19:54:11,660 [INFO] Combining affines for synth image 4 for image 1
+2023-06-13 19:54:11,660 [INFO] Combining affines for synth image 5 for image 1
+2023-06-13 19:54:11,660 [INFO] Combining affines for synth image 6 for image 1
+2023-06-13 19:54:11,661 [INFO] Combining affines for synth image 7 for image 1
+2023-06-13 19:54:11,661 [INFO] Combining affines for synth image 8 for image 1
+2023-06-13 19:54:11,661 [INFO] Combining affines for synth image 9 for image 1
+2023-06-13 19:54:11,661 [INFO] Combining affines for synth image 10 for image 1
+2023-06-13 19:54:11,661 [INFO] Applying affines for image 1
+2023-06-13 19:58:19,821 [INFO] Generating label intensity means...
+2023-06-13 19:58:19,826 [INFO] Applying label intensity means for image 1
+2023-06-13 19:58:48,823 [INFO] Saving images to /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/Output
+2023-06-13 19:58:48,824 [INFO] Saving synth image 1 for image 1
+2023-06-13 19:58:52,539 [INFO] Saving synth image 2 for image 1
+2023-06-13 19:58:57,840 [INFO] Saving synth image 3 for image 1
+2023-06-13 19:59:03,142 [INFO] Saving synth image 4 for image 1
+2023-06-13 19:59:07,809 [INFO] Saving synth image 5 for image 1
+2023-06-13 19:59:11,822 [INFO] Saving synth image 6 for image 1
+2023-06-13 19:59:14,875 [INFO] Saving synth image 7 for image 1
+2023-06-13 19:59:19,838 [INFO] Saving synth image 8 for image 1
+2023-06-13 19:59:23,262 [INFO] Saving synth image 9 for image 1
+2023-06-13 19:59:26,724 [INFO] Saving synth image 10 for image 1
+2023-06-13 20:14:34,009 [INFO] Starting synthetic data generation...
+2023-06-13 20:14:34,010 [INFO] Received the following parameters:
+2023-06-13 20:14:34,010 [INFO] 
+I                      : /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/InputImages
+O                      : /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/Output
+AFFINE_TRANSLATION     : 10
+AFFINE_ROTATION        : 45
+AFFINE_SCALING         : 20
+DOWNSAMPLE_FACTOR      : 5
+MEAN_LABEL_INTENSITY   : None
+N_IMAGES               : 10
+DEFORMATION_RESOLUTION : 10
+DEFORMATION_SD         : 3
+2023-06-13 20:14:34,010 [INFO] Reading input from /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/InputImages
+2023-06-13 20:14:34,010 [INFO] Loading data from /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/InputImages/sub-032125_ses-001_run-1_T1w.nii.gz
+2023-06-13 20:14:34,813 [INFO] Generating affine translation for image 1
+2023-06-13 20:14:34,813 [INFO] Generating affine rotation for synth image 1 for image 1
+2023-06-13 20:14:34,813 [INFO] Generating affine rotation for synth image 2 for image 1
+2023-06-13 20:14:34,813 [INFO] Generating affine rotation for synth image 3 for image 1
+2023-06-13 20:14:34,813 [INFO] Generating affine rotation for synth image 4 for image 1
+2023-06-13 20:14:34,813 [INFO] Generating affine rotation for synth image 5 for image 1
+2023-06-13 20:14:34,813 [INFO] Generating affine rotation for synth image 6 for image 1
+2023-06-13 20:14:34,813 [INFO] Generating affine rotation for synth image 7 for image 1
+2023-06-13 20:14:34,813 [INFO] Generating affine rotation for synth image 8 for image 1
+2023-06-13 20:14:34,813 [INFO] Generating affine rotation for synth image 9 for image 1
+2023-06-13 20:14:34,813 [INFO] Generating affine rotation for synth image 10 for image 1
+2023-06-13 20:14:34,813 [INFO] Generating affine scaling for synth image 1 for image 1
+2023-06-13 20:14:34,813 [INFO] Generating affine scaling for synth image 2 for image 1
+2023-06-13 20:14:34,813 [INFO] Generating affine scaling for synth image 3 for image 1
+2023-06-13 20:14:34,813 [INFO] Generating affine scaling for synth image 4 for image 1
+2023-06-13 20:14:34,813 [INFO] Generating affine scaling for synth image 5 for image 1
+2023-06-13 20:14:34,813 [INFO] Generating affine scaling for synth image 6 for image 1
+2023-06-13 20:14:34,813 [INFO] Generating affine scaling for synth image 7 for image 1
+2023-06-13 20:14:34,813 [INFO] Generating affine scaling for synth image 8 for image 1
+2023-06-13 20:14:34,813 [INFO] Generating affine scaling for synth image 9 for image 1
+2023-06-13 20:14:34,813 [INFO] Generating affine scaling for synth image 10 for image 1
+2023-06-13 20:14:34,813 [INFO] Combining affines for synth image 1 for image 1
+2023-06-13 20:14:34,814 [INFO] Combining affines for synth image 2 for image 1
+2023-06-13 20:14:34,814 [INFO] Combining affines for synth image 3 for image 1
+2023-06-13 20:14:34,814 [INFO] Combining affines for synth image 4 for image 1
+2023-06-13 20:14:34,814 [INFO] Combining affines for synth image 5 for image 1
+2023-06-13 20:14:34,814 [INFO] Combining affines for synth image 6 for image 1
+2023-06-13 20:14:34,814 [INFO] Combining affines for synth image 7 for image 1
+2023-06-13 20:14:34,814 [INFO] Combining affines for synth image 8 for image 1
+2023-06-13 20:14:34,814 [INFO] Combining affines for synth image 9 for image 1
+2023-06-13 20:14:34,814 [INFO] Combining affines for synth image 10 for image 1
+2023-06-13 20:14:34,814 [INFO] Applying affines for image 1
+2023-06-13 20:18:11,785 [INFO] Generating label intensity means...
+2023-06-13 20:18:11,790 [INFO] Applying label intensity means for image 1
+2023-06-13 20:18:35,195 [INFO] Saving images to /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/Output
+2023-06-13 20:18:35,196 [INFO] Saving synth image 1 for image 1
+2023-06-13 20:21:41,506 [INFO] Starting synthetic data generation...
+2023-06-13 20:21:41,506 [INFO] Received the following parameters:
+2023-06-13 20:21:41,506 [INFO] 
+I                      : /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/InputImages
+O                      : /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/Output]
+AFFINE_TRANSLATION     : 10
+AFFINE_ROTATION        : 45
+AFFINE_SCALING         : 20
+DOWNSAMPLE_FACTOR      : 5
+MEAN_LABEL_INTENSITY   : None
+N_IMAGES               : 10
+DEFORMATION_RESOLUTION : 10
+DEFORMATION_SD         : 3
+2023-06-13 20:21:41,506 [INFO] Reading input from /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/InputImages
+2023-06-13 20:21:41,506 [INFO] Loading data from /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/InputImages/sub-032125_ses-001_run-1_T1w.nii.gz
+2023-06-13 20:21:42,267 [INFO] Generating affine translation for image 1
+2023-06-13 20:21:42,267 [INFO] Generating affine rotation for synth image 1 for image 1
+2023-06-13 20:21:42,267 [INFO] Generating affine rotation for synth image 2 for image 1
+2023-06-13 20:21:42,267 [INFO] Generating affine rotation for synth image 3 for image 1
+2023-06-13 20:21:42,267 [INFO] Generating affine rotation for synth image 4 for image 1
+2023-06-13 20:21:42,267 [INFO] Generating affine rotation for synth image 5 for image 1
+2023-06-13 20:21:42,267 [INFO] Generating affine rotation for synth image 6 for image 1
+2023-06-13 20:21:42,267 [INFO] Generating affine rotation for synth image 7 for image 1
+2023-06-13 20:21:42,267 [INFO] Generating affine rotation for synth image 8 for image 1
+2023-06-13 20:21:42,267 [INFO] Generating affine rotation for synth image 9 for image 1
+2023-06-13 20:21:42,267 [INFO] Generating affine rotation for synth image 10 for image 1
+2023-06-13 20:21:42,267 [INFO] Generating affine scaling for synth image 1 for image 1
+2023-06-13 20:21:42,267 [INFO] Generating affine scaling for synth image 2 for image 1
+2023-06-13 20:21:42,267 [INFO] Generating affine scaling for synth image 3 for image 1
+2023-06-13 20:21:42,267 [INFO] Generating affine scaling for synth image 4 for image 1
+2023-06-13 20:21:42,267 [INFO] Generating affine scaling for synth image 5 for image 1
+2023-06-13 20:21:42,268 [INFO] Generating affine scaling for synth image 6 for image 1
+2023-06-13 20:21:42,268 [INFO] Generating affine scaling for synth image 7 for image 1
+2023-06-13 20:21:42,268 [INFO] Generating affine scaling for synth image 8 for image 1
+2023-06-13 20:21:42,268 [INFO] Generating affine scaling for synth image 9 for image 1
+2023-06-13 20:21:42,268 [INFO] Generating affine scaling for synth image 10 for image 1
+2023-06-13 20:21:42,268 [INFO] Combining affines for synth image 1 for image 1
+2023-06-13 20:21:42,268 [INFO] Combining affines for synth image 2 for image 1
+2023-06-13 20:21:42,268 [INFO] Combining affines for synth image 3 for image 1
+2023-06-13 20:21:42,268 [INFO] Combining affines for synth image 4 for image 1
+2023-06-13 20:21:42,268 [INFO] Combining affines for synth image 5 for image 1
+2023-06-13 20:21:42,268 [INFO] Combining affines for synth image 6 for image 1
+2023-06-13 20:21:42,268 [INFO] Combining affines for synth image 7 for image 1
+2023-06-13 20:21:42,268 [INFO] Combining affines for synth image 8 for image 1
+2023-06-13 20:21:42,268 [INFO] Combining affines for synth image 9 for image 1
+2023-06-13 20:21:42,268 [INFO] Combining affines for synth image 10 for image 1
+2023-06-13 20:21:42,268 [INFO] Applying affines for image 1
+2023-06-13 20:21:46,822 [INFO] Starting synthetic data generation...
+2023-06-13 20:21:46,823 [INFO] Received the following parameters:
+2023-06-13 20:21:46,823 [INFO] 
+I                      : /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/InputImages
+O                      : /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/Output
+AFFINE_TRANSLATION     : 10
+AFFINE_ROTATION        : 45
+AFFINE_SCALING         : 20
+DOWNSAMPLE_FACTOR      : 5
+MEAN_LABEL_INTENSITY   : None
+N_IMAGES               : 10
+DEFORMATION_RESOLUTION : 10
+DEFORMATION_SD         : 3
+2023-06-13 20:21:46,823 [INFO] Reading input from /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/InputImages
+2023-06-13 20:21:46,823 [INFO] Loading data from /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/InputImages/sub-032125_ses-001_run-1_T1w.nii.gz
+2023-06-13 20:21:47,579 [INFO] Generating affine translation for image 1
+2023-06-13 20:21:47,579 [INFO] Generating affine rotation for synth image 1 for image 1
+2023-06-13 20:21:47,579 [INFO] Generating affine rotation for synth image 2 for image 1
+2023-06-13 20:21:47,579 [INFO] Generating affine rotation for synth image 3 for image 1
+2023-06-13 20:21:47,579 [INFO] Generating affine rotation for synth image 4 for image 1
+2023-06-13 20:21:47,579 [INFO] Generating affine rotation for synth image 5 for image 1
+2023-06-13 20:21:47,580 [INFO] Generating affine rotation for synth image 6 for image 1
+2023-06-13 20:21:47,580 [INFO] Generating affine rotation for synth image 7 for image 1
+2023-06-13 20:21:47,580 [INFO] Generating affine rotation for synth image 8 for image 1
+2023-06-13 20:21:47,580 [INFO] Generating affine rotation for synth image 9 for image 1
+2023-06-13 20:21:47,580 [INFO] Generating affine rotation for synth image 10 for image 1
+2023-06-13 20:21:47,580 [INFO] Generating affine scaling for synth image 1 for image 1
+2023-06-13 20:21:47,580 [INFO] Generating affine scaling for synth image 2 for image 1
+2023-06-13 20:21:47,580 [INFO] Generating affine scaling for synth image 3 for image 1
+2023-06-13 20:21:47,580 [INFO] Generating affine scaling for synth image 4 for image 1
+2023-06-13 20:21:47,580 [INFO] Generating affine scaling for synth image 5 for image 1
+2023-06-13 20:21:47,580 [INFO] Generating affine scaling for synth image 6 for image 1
+2023-06-13 20:21:47,580 [INFO] Generating affine scaling for synth image 7 for image 1
+2023-06-13 20:21:47,580 [INFO] Generating affine scaling for synth image 8 for image 1
+2023-06-13 20:21:47,580 [INFO] Generating affine scaling for synth image 9 for image 1
+2023-06-13 20:21:47,580 [INFO] Generating affine scaling for synth image 10 for image 1
+2023-06-13 20:21:47,580 [INFO] Combining affines for synth image 1 for image 1
+2023-06-13 20:21:47,580 [INFO] Combining affines for synth image 2 for image 1
+2023-06-13 20:21:47,580 [INFO] Combining affines for synth image 3 for image 1
+2023-06-13 20:21:47,580 [INFO] Combining affines for synth image 4 for image 1
+2023-06-13 20:21:47,580 [INFO] Combining affines for synth image 5 for image 1
+2023-06-13 20:21:47,580 [INFO] Combining affines for synth image 6 for image 1
+2023-06-13 20:21:47,580 [INFO] Combining affines for synth image 7 for image 1
+2023-06-13 20:21:47,580 [INFO] Combining affines for synth image 8 for image 1
+2023-06-13 20:21:47,580 [INFO] Combining affines for synth image 9 for image 1
+2023-06-13 20:21:47,580 [INFO] Combining affines for synth image 10 for image 1
+2023-06-13 20:21:47,580 [INFO] Applying affines for image 1
+2023-06-13 20:24:55,051 [INFO] Generating label intensity means...
+2023-06-13 20:24:55,053 [INFO] Applying label intensity means for image 1
+2023-06-13 20:25:16,976 [INFO] Saving images to /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/Output
+2023-06-13 20:25:16,980 [INFO] Saving synth image 1 for image 1
+2023-06-13 20:28:13,120 [INFO] Starting synthetic data generation...
+2023-06-13 20:28:13,120 [INFO] Received the following parameters:
+2023-06-13 20:28:13,120 [INFO] 
+I                      : /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/InputImages
+O                      : /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/Output
+AFFINE_TRANSLATION     : 10
+AFFINE_ROTATION        : 45
+AFFINE_SCALING         : 20
+DOWNSAMPLE_FACTOR      : 5
+MEAN_LABEL_INTENSITY   : None
+N_IMAGES               : 10
+DEFORMATION_RESOLUTION : 10
+DEFORMATION_SD         : 3
+2023-06-13 20:28:13,120 [INFO] Reading input from /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/InputImages
+2023-06-13 20:28:13,120 [INFO] Loading data from /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/InputImages/sub-032125_ses-001_run-1_T1w.nii.gz
+2023-06-13 20:28:13,906 [INFO] Generating affine translation for image 1
+2023-06-13 20:28:13,906 [INFO] Generating affine rotation for synth image 1 for image 1
+2023-06-13 20:28:13,907 [INFO] Generating affine rotation for synth image 2 for image 1
+2023-06-13 20:28:13,907 [INFO] Generating affine rotation for synth image 3 for image 1
+2023-06-13 20:28:13,907 [INFO] Generating affine rotation for synth image 4 for image 1
+2023-06-13 20:28:13,907 [INFO] Generating affine rotation for synth image 5 for image 1
+2023-06-13 20:28:13,907 [INFO] Generating affine rotation for synth image 6 for image 1
+2023-06-13 20:28:13,907 [INFO] Generating affine rotation for synth image 7 for image 1
+2023-06-13 20:28:13,907 [INFO] Generating affine rotation for synth image 8 for image 1
+2023-06-13 20:28:13,907 [INFO] Generating affine rotation for synth image 9 for image 1
+2023-06-13 20:28:13,907 [INFO] Generating affine rotation for synth image 10 for image 1
+2023-06-13 20:28:13,907 [INFO] Generating affine scaling for synth image 1 for image 1
+2023-06-13 20:28:13,907 [INFO] Generating affine scaling for synth image 2 for image 1
+2023-06-13 20:28:13,907 [INFO] Generating affine scaling for synth image 3 for image 1
+2023-06-13 20:28:13,907 [INFO] Generating affine scaling for synth image 4 for image 1
+2023-06-13 20:28:13,907 [INFO] Generating affine scaling for synth image 5 for image 1
+2023-06-13 20:28:13,907 [INFO] Generating affine scaling for synth image 6 for image 1
+2023-06-13 20:28:13,907 [INFO] Generating affine scaling for synth image 7 for image 1
+2023-06-13 20:28:13,907 [INFO] Generating affine scaling for synth image 8 for image 1
+2023-06-13 20:28:13,907 [INFO] Generating affine scaling for synth image 9 for image 1
+2023-06-13 20:28:13,907 [INFO] Generating affine scaling for synth image 10 for image 1
+2023-06-13 20:28:13,907 [INFO] Combining affines for synth image 1 for image 1
+2023-06-13 20:28:13,907 [INFO] Combining affines for synth image 2 for image 1
+2023-06-13 20:28:13,907 [INFO] Combining affines for synth image 3 for image 1
+2023-06-13 20:28:13,907 [INFO] Combining affines for synth image 4 for image 1
+2023-06-13 20:28:13,907 [INFO] Combining affines for synth image 5 for image 1
+2023-06-13 20:28:13,907 [INFO] Combining affines for synth image 6 for image 1
+2023-06-13 20:28:13,907 [INFO] Combining affines for synth image 7 for image 1
+2023-06-13 20:28:13,907 [INFO] Combining affines for synth image 8 for image 1
+2023-06-13 20:28:13,907 [INFO] Combining affines for synth image 9 for image 1
+2023-06-13 20:28:13,907 [INFO] Combining affines for synth image 10 for image 1
+2023-06-13 20:28:13,907 [INFO] Applying affines for image 1
+2023-06-13 20:36:23,281 [INFO] Starting synthetic data generation...
+2023-06-13 20:36:23,281 [INFO] Received the following parameters:
+2023-06-13 20:36:23,281 [INFO] 
+I                      : /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/InputImages
+O                      : /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/Output
+AFFINE_TRANSLATION     : 10
+AFFINE_ROTATION        : 45
+AFFINE_SCALING         : 20
+DOWNSAMPLE_FACTOR      : 5
+MEAN_LABEL_INTENSITY   : None
+N_IMAGES               : 10
+DEFORMATION_RESOLUTION : 10
+DEFORMATION_SD         : 3
+2023-06-13 20:36:23,281 [INFO] Reading input from /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/InputImages
+2023-06-13 20:36:23,281 [INFO] Loading data from /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/InputImages/sub-032125_ses-001_run-1_T1w.nii.gz
+2023-06-13 20:36:24,046 [INFO] Generating affine translation for image 1
+2023-06-13 20:36:24,046 [INFO] Generating affine rotation for synth image 1 for image 1
+2023-06-13 20:36:24,046 [INFO] Generating affine rotation for synth image 2 for image 1
+2023-06-13 20:36:24,046 [INFO] Generating affine rotation for synth image 3 for image 1
+2023-06-13 20:36:24,046 [INFO] Generating affine rotation for synth image 4 for image 1
+2023-06-13 20:36:24,046 [INFO] Generating affine rotation for synth image 5 for image 1
+2023-06-13 20:36:24,046 [INFO] Generating affine rotation for synth image 6 for image 1
+2023-06-13 20:36:24,046 [INFO] Generating affine rotation for synth image 7 for image 1
+2023-06-13 20:36:24,046 [INFO] Generating affine rotation for synth image 8 for image 1
+2023-06-13 20:36:24,046 [INFO] Generating affine rotation for synth image 9 for image 1
+2023-06-13 20:36:24,046 [INFO] Generating affine rotation for synth image 10 for image 1
+2023-06-13 20:36:24,046 [INFO] Generating affine scaling for synth image 1 for image 1
+2023-06-13 20:36:24,046 [INFO] Generating affine scaling for synth image 2 for image 1
+2023-06-13 20:36:24,046 [INFO] Generating affine scaling for synth image 3 for image 1
+2023-06-13 20:36:24,046 [INFO] Generating affine scaling for synth image 4 for image 1
+2023-06-13 20:36:24,047 [INFO] Generating affine scaling for synth image 5 for image 1
+2023-06-13 20:36:24,047 [INFO] Generating affine scaling for synth image 6 for image 1
+2023-06-13 20:36:24,047 [INFO] Generating affine scaling for synth image 7 for image 1
+2023-06-13 20:36:24,047 [INFO] Generating affine scaling for synth image 8 for image 1
+2023-06-13 20:36:24,047 [INFO] Generating affine scaling for synth image 9 for image 1
+2023-06-13 20:36:24,047 [INFO] Generating affine scaling for synth image 10 for image 1
+2023-06-13 20:36:24,047 [INFO] Combining affines for synth image 1 for image 1
+2023-06-13 20:36:24,047 [INFO] Combining affines for synth image 2 for image 1
+2023-06-13 20:36:24,047 [INFO] Combining affines for synth image 3 for image 1
+2023-06-13 20:36:24,047 [INFO] Combining affines for synth image 4 for image 1
+2023-06-13 20:36:24,047 [INFO] Combining affines for synth image 5 for image 1
+2023-06-13 20:36:24,047 [INFO] Combining affines for synth image 6 for image 1
+2023-06-13 20:36:24,047 [INFO] Combining affines for synth image 7 for image 1
+2023-06-13 20:36:24,047 [INFO] Combining affines for synth image 8 for image 1
+2023-06-13 20:36:24,047 [INFO] Combining affines for synth image 9 for image 1
+2023-06-13 20:36:24,047 [INFO] Combining affines for synth image 10 for image 1
+2023-06-13 20:36:24,047 [INFO] Applying affines for image 1
+2023-06-13 20:40:24,045 [INFO] Generating label intensity means...
+2023-06-13 20:40:24,048 [INFO] Applying label intensity means for image 1
+2023-06-13 20:40:53,057 [INFO] Saving images to /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/Output
+2023-06-13 20:40:53,059 [INFO] Saving synth image 1 for image 1
+2023-06-13 20:40:58,573 [INFO] Saving synth image 2 for image 1
+2023-06-13 20:41:03,692 [INFO] Saving synth image 3 for image 1
+2023-06-13 20:41:09,098 [INFO] Saving synth image 4 for image 1
+2023-06-13 20:41:15,372 [INFO] Saving synth image 5 for image 1
+2023-06-13 20:41:19,059 [INFO] Saving synth image 6 for image 1
+2023-06-13 20:41:23,360 [INFO] Saving synth image 7 for image 1
+2023-06-13 20:41:27,695 [INFO] Saving synth image 8 for image 1
+2023-06-13 20:41:32,341 [INFO] Saving synth image 9 for image 1
+2023-06-13 20:41:36,440 [INFO] Saving synth image 10 for image 1
+2023-06-13 20:44:59,596 [INFO] Starting synthetic data generation...
+2023-06-13 20:44:59,596 [INFO] Received the following parameters:
+2023-06-13 20:44:59,596 [INFO] 
+I                      : /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/InputImages
+O                      : /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/Output
+AFFINE_TRANSLATION     : 2
+AFFINE_ROTATION        : 45
+AFFINE_SCALING         : 20
+DOWNSAMPLE_FACTOR      : 5
+MEAN_LABEL_INTENSITY   : None
+N_IMAGES               : 10
+DEFORMATION_RESOLUTION : 10
+DEFORMATION_SD         : 3
+2023-06-13 20:44:59,596 [INFO] Reading input from /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/InputImages
+2023-06-13 20:44:59,596 [INFO] Loading data from /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/InputImages/sub-032125_ses-001_run-1_T1w.nii.gz
+2023-06-13 20:45:00,415 [INFO] Generating affine translation for image 1
+2023-06-13 20:45:00,415 [INFO] Generating affine rotation for synth image 1 for image 1
+2023-06-13 20:45:00,415 [INFO] Generating affine rotation for synth image 2 for image 1
+2023-06-13 20:45:00,415 [INFO] Generating affine rotation for synth image 3 for image 1
+2023-06-13 20:45:00,415 [INFO] Generating affine rotation for synth image 4 for image 1
+2023-06-13 20:45:00,416 [INFO] Generating affine rotation for synth image 5 for image 1
+2023-06-13 20:45:00,416 [INFO] Generating affine rotation for synth image 6 for image 1
+2023-06-13 20:45:00,416 [INFO] Generating affine rotation for synth image 7 for image 1
+2023-06-13 20:45:00,416 [INFO] Generating affine rotation for synth image 8 for image 1
+2023-06-13 20:45:00,416 [INFO] Generating affine rotation for synth image 9 for image 1
+2023-06-13 20:45:00,416 [INFO] Generating affine rotation for synth image 10 for image 1
+2023-06-13 20:45:00,416 [INFO] Generating affine scaling for synth image 1 for image 1
+2023-06-13 20:45:00,416 [INFO] Generating affine scaling for synth image 2 for image 1
+2023-06-13 20:45:00,417 [INFO] Generating affine scaling for synth image 3 for image 1
+2023-06-13 20:45:00,417 [INFO] Generating affine scaling for synth image 4 for image 1
+2023-06-13 20:45:00,417 [INFO] Generating affine scaling for synth image 5 for image 1
+2023-06-13 20:45:00,417 [INFO] Generating affine scaling for synth image 6 for image 1
+2023-06-13 20:45:00,417 [INFO] Generating affine scaling for synth image 7 for image 1
+2023-06-13 20:45:00,417 [INFO] Generating affine scaling for synth image 8 for image 1
+2023-06-13 20:45:00,417 [INFO] Generating affine scaling for synth image 9 for image 1
+2023-06-13 20:45:00,417 [INFO] Generating affine scaling for synth image 10 for image 1
+2023-06-13 20:45:00,417 [INFO] Combining affines for synth image 1 for image 1
+2023-06-13 20:45:00,417 [INFO] Combining affines for synth image 2 for image 1
+2023-06-13 20:45:00,417 [INFO] Combining affines for synth image 3 for image 1
+2023-06-13 20:45:00,417 [INFO] Combining affines for synth image 4 for image 1
+2023-06-13 20:45:00,417 [INFO] Combining affines for synth image 5 for image 1
+2023-06-13 20:45:00,417 [INFO] Combining affines for synth image 6 for image 1
+2023-06-13 20:45:00,417 [INFO] Combining affines for synth image 7 for image 1
+2023-06-13 20:45:00,417 [INFO] Combining affines for synth image 8 for image 1
+2023-06-13 20:45:00,417 [INFO] Combining affines for synth image 9 for image 1
+2023-06-13 20:45:00,417 [INFO] Combining affines for synth image 10 for image 1
+2023-06-13 20:45:00,417 [INFO] Applying affines for image 1
+2023-06-13 20:48:45,741 [INFO] Generating label intensity means...
+2023-06-13 20:48:45,744 [INFO] Applying label intensity means for image 1
+2023-06-13 20:49:11,391 [INFO] Saving images to /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/Output
+2023-06-13 20:49:11,393 [INFO] Saving synth image 1 for image 1
+2023-06-13 20:49:15,707 [INFO] Saving synth image 2 for image 1
+2023-06-13 20:49:20,882 [INFO] Saving synth image 3 for image 1
+2023-06-13 20:49:25,111 [INFO] Saving synth image 4 for image 1
+2023-06-13 20:49:30,577 [INFO] Saving synth image 5 for image 1
+2023-06-13 20:49:34,358 [INFO] Saving synth image 6 for image 1
+2023-06-13 20:49:39,675 [INFO] Saving synth image 7 for image 1
+2023-06-13 20:49:45,122 [INFO] Saving synth image 8 for image 1
+2023-06-13 20:49:49,624 [INFO] Saving synth image 9 for image 1
+2023-06-13 20:49:54,056 [INFO] Saving synth image 10 for image 1
+2023-06-13 20:54:00,272 [INFO] Starting synthetic data generation...
+2023-06-13 20:54:00,272 [INFO] Received the following parameters:
+2023-06-13 20:54:00,272 [INFO] 
+I                      : /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/InputImages
+O                      : /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/Output
+AFFINE_TRANSLATION     : 25
+AFFINE_ROTATION        : 45
+AFFINE_SCALING         : 20
+DOWNSAMPLE_FACTOR      : 5
+MEAN_LABEL_INTENSITY   : None
+N_IMAGES               : 10
+DEFORMATION_RESOLUTION : 10
+DEFORMATION_SD         : 3
+2023-06-13 20:54:00,273 [INFO] Reading input from /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/InputImages
+2023-06-13 20:54:00,273 [INFO] Loading data from /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/InputImages/sub-032125_ses-001_run-1_T1w.nii.gz
+2023-06-13 20:54:01,050 [INFO] Generating label intensity means...
+2023-06-13 20:54:01,050 [INFO] Applying label intensity means for image 1
+2023-06-13 20:54:19,747 [INFO] Saving images to /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/Output
+2023-06-13 20:54:19,747 [INFO] Saving synth image 1 for image 1
+2023-06-13 20:54:39,660 [INFO] Starting synthetic data generation...
+2023-06-13 20:54:39,660 [INFO] Received the following parameters:
+2023-06-13 20:54:39,660 [INFO] 
+I                      : /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/InputImages
+O                      : /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/Output
+AFFINE_TRANSLATION     : 25
+AFFINE_ROTATION        : 45
+AFFINE_SCALING         : 20
+DOWNSAMPLE_FACTOR      : 5
+MEAN_LABEL_INTENSITY   : None
+N_IMAGES               : 10
+DEFORMATION_RESOLUTION : 10
+DEFORMATION_SD         : 3
+2023-06-13 20:54:39,660 [INFO] Reading input from /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/InputImages
+2023-06-13 20:54:39,660 [INFO] Loading data from /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/InputImages/sub-032125_ses-001_run-1_T1w.nii.gz
+2023-06-13 20:54:40,459 [INFO] Generating label intensity means...
+2023-06-13 20:54:40,459 [INFO] Applying label intensity means for image 1
+2023-06-13 20:54:55,433 [INFO] Saving images to /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/Output
+2023-06-13 20:54:55,434 [INFO] Saving synth image 1 for image 1
+2023-06-13 20:54:57,908 [INFO] Saving synth image 2 for image 1
+2023-06-13 20:55:00,693 [INFO] Saving synth image 3 for image 1
+2023-06-13 20:55:03,416 [INFO] Saving synth image 4 for image 1
+2023-06-13 20:55:06,248 [INFO] Saving synth image 5 for image 1
+2023-06-13 20:55:09,629 [INFO] Saving synth image 6 for image 1
+2023-06-13 20:55:12,341 [INFO] Saving synth image 7 for image 1
+2023-06-13 20:55:15,333 [INFO] Saving synth image 8 for image 1
+2023-06-13 20:55:18,711 [INFO] Saving synth image 9 for image 1
+2023-06-13 20:55:21,497 [INFO] Saving synth image 10 for image 1
+2023-06-13 20:58:09,850 [INFO] Starting synthetic data generation...
+2023-06-13 20:58:09,850 [INFO] Received the following parameters:
+2023-06-13 20:58:09,850 [INFO] 
+I                      : /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/InputImages
+O                      : /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/Output
+AFFINE_TRANSLATION     : 25
+AFFINE_ROTATION        : 45
+AFFINE_SCALING         : 20
+DOWNSAMPLE_FACTOR      : 5
+MEAN_LABEL_INTENSITY   : None
+N_IMAGES               : 10
+DEFORMATION_RESOLUTION : 10
+DEFORMATION_SD         : 3
+2023-06-13 20:58:09,850 [INFO] Reading input from /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/InputImages
+2023-06-13 20:58:09,851 [INFO] Loading data from /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/InputImages/sub-032125_ses-001_run-1_T1w.nii.gz
+2023-06-13 20:58:10,617 [INFO] Generating label intensity means...
+2023-06-13 20:58:10,617 [INFO] Applying label intensity means for image 1
+2023-06-13 20:58:28,014 [INFO] Saving images to /Users/Sam.Alldritt/Documents/Projects/DataSynthesis/Data/Output
+2023-06-13 20:58:28,015 [INFO] Saving synth image 1 for image 1
+2023-06-13 20:58:30,352 [INFO] Saving synth image 2 for image 1
+2023-06-13 20:58:32,801 [INFO] Saving synth image 3 for image 1
+2023-06-13 20:58:35,334 [INFO] Saving synth image 4 for image 1
+2023-06-13 20:58:37,818 [INFO] Saving synth image 5 for image 1
+2023-06-13 20:58:40,500 [INFO] Saving synth image 6 for image 1
+2023-06-13 20:58:43,034 [INFO] Saving synth image 7 for image 1
+2023-06-13 20:58:45,556 [INFO] Saving synth image 8 for image 1
+2023-06-13 20:58:48,072 [INFO] Saving synth image 9 for image 1
+2023-06-13 20:58:50,540 [INFO] Saving synth image 10 for image 1
