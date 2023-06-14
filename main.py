@@ -1,43 +1,36 @@
 from data_holder import DataHolder
 from synthesis import SyntheticModel
+import logger
+import time
 import argparse
 import sys
 import os
 
-# Testing
-
-
-def cycleData():
-    """
-    Cycles and loads all data from the base directory
-    """
-    print('Reading input...')
-    path = os.path.join(os.getcwd(), 'Data', 'InputImages')
-    niftiFilePaths = []
-    for root, dirnames, filenames in os.walk(path):
-        for filename in filenames:
-            if filename.endswith('.nii.gz'):
-                niftiFilePaths.append(os.path.join(root, filename))
-
-    return niftiFilePaths
-
 
 def main(**kwargs):
-    inputNiftiPaths = cycleData()
-    synthModel = SyntheticModel(kwargs)
-    dataHolder = DataHolder(inputNiftiPaths, synthModel)
-    dataHolder.makeTransforms(1)
-    dataHolder.applyTransforms()
+    if kwargs != None:
+        logger_instance = logger.setup_logger()
+        logger_instance.info('Starting synthetic data generation...')
+        logger.log_parameters(logger_instance, **kwargs)
+        synthModel = SyntheticModel(kwargs)
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         description='Synthetic data builder for NIFTI images')
 
+    parser.add_argument('-i',
+                        type=str,
+                        help='Enter input directory for images',
+                        required=True)
+    parser.add_argument('-o',
+                        type=str,
+                        help='Enter output directory for images',
+                        required=True)
     parser.add_argument('--affine_translation',
                         type=int,
                         choices=range(0, 26),
-                        default=10,
+                        default=25,
                         help='Customize range to affine translation range (in mm) from 0 to n (default: 15)')
     parser.add_argument('--affine_rotation',
                         type=int,
@@ -76,6 +69,3 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     main(**vars(args))
-
-
-# In main class, should have a way to pass the arguments into a dictionary to pass to synthesis model
